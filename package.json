@@ -2,5 +2,9 @@
   "name": "sourcejs-muslim",
   "version": "0.1.0",
   "author": "Adam Płócieniak",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adasq/sourcejs-muslim.git"
+  },
   "description": "Find out, how muslims see your component"
 }
