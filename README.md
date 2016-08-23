@@ -1,5 +1,9 @@
 # Find out, how muslims see your component
 
+It uses `dir` attribute and set it to `rtl` or `ltr`. You can enable/disable it in HTML API section
+
+![alt text](https://github.com/adasq/sourcejs-muslim/raw/master/docs/screen_01.png "Logo Title Text 1")
+
 Adds new features to SourceJS.
 
 [SourceJS](http://sourcejs.com) plugin.
