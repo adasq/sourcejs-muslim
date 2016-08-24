@@ -19,7 +19,7 @@ define([
 
         var ENABLE_MUSLIM_OPT_TEMPLATE = ''+
         '<div class="source_main_nav_ac_item">'+
-        '    <div class="source_main_nav_ac_tx">Enable muslims</div>'+
+        '    <div class="source_main_nav_ac_tx">Enable arabic</div>'+
         '    <div class="source_slider_frame">'+
         '        <span class="source_slider_button">'+
         '            <span class="source_slider_text source_slider_text_on">ON</span>'+
@@ -31,7 +31,7 @@ define([
         var muslimOptElem = $(ENABLE_MUSLIM_OPT_TEMPLATE);
         var bodyElem = $(document.body);
         var muslimOptButtonElem = muslimOptElem.find('.source_slider_frame');
-        
+
         muslimOptButtonElem.on('click', function(){
             var isEnabled = muslimOptButtonElem.hasClass(ENABLE_CLASS_NAME);
             if(isEnabled){
