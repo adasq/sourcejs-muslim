@@ -12,10 +12,10 @@ jobs:
   version:
     steps:
       - uses: adasq/dropbox-v2-api-watcher@prepublish
-      env:
-        TOKEN: ${{ secrets.token }}
-      with:
-        myInput: 'input'
+        env:
+          TOKEN: ${{ secrets.token }}
+        with:
+          myInput: 'input'
   build:
     runs-on: ubuntu-latest
     steps:
