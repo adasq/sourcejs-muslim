@@ -3,4 +3,4 @@
 
 // Examples:
 // var someModule = require('some-module');
-// global.app.get('/plugin/api', function(req, res){});
+// global.app.get('/plugin/api', function(req, res) {} );
