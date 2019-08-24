@@ -10,6 +10,7 @@ on:
 
 jobs:
   version:
+    runs-on: ubuntu-latest
     steps:
       - uses: adasq/dropbox-v2-api-watcher@prepublish
         env:
