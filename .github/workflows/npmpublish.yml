@@ -11,7 +11,7 @@ on:
 jobs:
   version:
     steps:
-      - uses: adasq/dropbox-v2-api-watcher@pre-publish
+      - uses: adasq/dropbox-v2-api-watcher@prepublish
       env:
         TOKEN: ${{ secrets.token }}
       with:
