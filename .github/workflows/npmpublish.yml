@@ -1,7 +1,8 @@
 name: Node.js Package
 
 on:
-  repository_dispatch: {}
+  repository_dispatch:
+    action: html.preview
 
 jobs:
   version:
