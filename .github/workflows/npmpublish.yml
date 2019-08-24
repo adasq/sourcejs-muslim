@@ -15,8 +15,7 @@ jobs:
           TOKEN: ${{ secrets.token }}
           OWNER: 'adasq'
           REPO: 'sourcejs-muslim'
-        with:
-          myInput: 'input'
+  
   build:
     runs-on: ubuntu-latest
     steps:
