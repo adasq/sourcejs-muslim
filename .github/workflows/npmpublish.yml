@@ -1,21 +1,10 @@
-name: Node.js Package
+name: Publish to NPM
 
 on:
   repository_dispatch:
     event_type: html.preview
 
 jobs:
-  version:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: adasq/dropbox-v2-api-watcher@prepublish
-        env:
-          TOKEN: ${{ secrets.token }}
-          OWNER: 'adasq'
-          REPO: 'sourcejs-muslim'
-  
   build:
     runs-on: ubuntu-latest
     steps:
@@ -24,7 +13,18 @@ jobs:
         with:
           node-version: 10
       - run: npm install
-
+  version:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: adasq/dropbox-v2-api-watcher@prepublish
+        with:
+          myInput: ${{ github.event }}
+        env:
+          TOKEN: ${{ secrets.token }}
+          OWNER: 'adasq'
+          REPO: 'sourcejs-muslim'
   publish-npm:
     needs: version
     runs-on: ubuntu-latest
