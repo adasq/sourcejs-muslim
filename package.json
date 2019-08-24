@@ -1,10 +1,1 @@
-{
-  "name": "sourcejs-muslim",
-  "version": "0.1.4",
-  "author": "Adam Płócieniak",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adasq/sourcejs-muslim.git"
-  },
-  "description": "Find out, how arabs see your component"
-}
+{"name":"node12-template-action","version":"1.0.0","private":true,"description":"Node 12 template action","main":"lib/main.js","scripts":{"start":"node lib/main.js","tsc":"tsc","build":"tsc && node lib/main.js","test":"jest"},"repository":{"type":"git","url":"git+https://github.com/actions/node12-template.git"},"keywords":["actions","node","setup"],"author":"GitHub","license":"MIT","dependencies":{"@actions/core":"^1.0.0","@actions/io":"^1.0.0","@actions/exec":"^1.0.0","@actions/github":"^1.0.0","@actions/tool-cache":"^1.0.0","semver":"^6.1.1"},"devDependencies":{"@types/jest":"^24.0.13","@types/node":"^12.0.4","@types/semver":"^6.0.0","jest":"^24.8.0","jest-circus":"^24.7.1","ts-jest":"^24.0.2","typescript":"^3.5.1"}}
