@@ -2,7 +2,7 @@ name: Node.js Package
 
 on:
   repository_dispatch:
-    action: html.preview
+    event_type: html.preview
 
 jobs:
   version:
