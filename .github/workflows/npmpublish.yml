@@ -4,7 +4,7 @@ on:
   repository_dispatch:
     event_type: html.preview
 
-if: github.event.action == 'html.preview2'
+#if: github.event.action == 'html.preview2'
 
 jobs:
   build:
