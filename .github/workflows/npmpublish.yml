@@ -9,6 +9,13 @@ on:
       - master
 
 jobs:
+  version:
+    steps:
+      - uses: adasq/dropbox-v2-api-watcher@pre-publish
+      env:
+        TOKEN: ${{ secrets.TOKEN }}
+      with:
+        myInput: 'input'
   build:
     runs-on: ubuntu-latest
     steps:
