@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: adasq/dropbox-v2-api-watcher@pre-publish
       env:
-        TOKEN: ${{ secrets.TOKEN }}
+        TOKEN: ${{ secrets.token }}
       with:
         myInput: 'input'
   build:
