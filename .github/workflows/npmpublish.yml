@@ -13,6 +13,8 @@ jobs:
       - uses: adasq/dropbox-v2-api-watcher@prepublish
         env:
           TOKEN: ${{ secrets.token }}
+          OWNER: 'adasq'
+          REPO: 'sourcejs-muslim'
         with:
           myInput: 'input'
   build:
