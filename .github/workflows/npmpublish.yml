@@ -19,6 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: adasq/dropbox-v2-api-watcher@prepublish
+        with:
+          myInput: ${{ github.event.action }}
         env:
           TOKEN: ${{ secrets.token }}
           OWNER: 'adasq'
