@@ -1,9 +1,9 @@
 name: Publish to NPM
 
 on:
-  branches:
-  - master
   push:
+    branches:
+    - master
     paths:
     - 'dist/api.json'
 
