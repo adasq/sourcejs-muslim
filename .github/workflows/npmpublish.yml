@@ -32,7 +32,7 @@ jobs:
           OWNER: 'adasq'
           REPO: 'sourcejs-muslim'
       - name: 'xd2'
-        if: job.steps.xdid.status == success
+        if: job.steps.xdid.status == 'success'
         run: echo 'TEST'
   publish-npm:
     needs: version
