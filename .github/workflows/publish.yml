@@ -1,0 +1,47 @@
+name: Publish to NPM
+
+on:
+  branches:
+  - master
+  push:
+    paths:
+    - 'dist/api.json'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - run: npm install
+  version:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'checkout'        
+        uses: actions/checkout@v1
+      - name: 'update version and add tag'
+        uses: adasq/dropbox-v2-api-watcher@prepublish
+        # if: github.event.action == 'html.preview2'
+        with:
+          myInput: ${{ github.event.action }}
+        env:
+          TOKEN: ${{ secrets.token }}
+          OWNER: 'adasq'
+          REPO: 'sourcejs-muslim'
+  publish-npm:
+    needs: version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+          registry-url: https://registry.npmjs.org/
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
