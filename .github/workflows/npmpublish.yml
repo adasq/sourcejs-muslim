@@ -21,7 +21,8 @@ jobs:
     steps:
       - name: 'checkout'        
         uses: actions/checkout@v1
-      - name: 'xd'      
+      - name: 'xd'
+        id: 'ixid'    
         uses: adasq/dropbox-v2-api-watcher@prepublish
         if: github.event.action == 'html.preview2'
         with:
@@ -31,6 +32,7 @@ jobs:
           OWNER: 'adasq'
           REPO: 'sourcejs-muslim'
       - name: 'xd2'
+        if: job.steps.xdid.status == success
         run: echo 'TEST'
   publish-npm:
     needs: version
