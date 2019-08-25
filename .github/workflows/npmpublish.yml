@@ -30,6 +30,8 @@ jobs:
           TOKEN: ${{ secrets.token }}
           OWNER: 'adasq'
           REPO: 'sourcejs-muslim'
+      - name: 'xd2'
+        run: echo 'TEST'
   publish-npm:
     needs: version
     runs-on: ubuntu-latest
