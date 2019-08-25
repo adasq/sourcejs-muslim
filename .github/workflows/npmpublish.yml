@@ -19,11 +19,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: 'checkout'
-      # if: github.event.action == 'html.preview2'
+      - name: 'checkout'        
         uses: actions/checkout@v1
-      - name: 'qqq'
+      - name: 'xd'      
         uses: adasq/dropbox-v2-api-watcher@prepublish
+        if: github.event.action == 'html.preview2'
         with:
           myInput: ${{ github.event.action }}
         env:
