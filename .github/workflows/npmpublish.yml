@@ -19,15 +19,17 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      if: github.event.action == 'html.preview2'
-      - uses: actions/checkout@v1
-      - uses: adasq/dropbox-v2-api-watcher@prepublish
-        with:
-          myInput: ${{ github.event.action }}
-        env:
-          TOKEN: ${{ secrets.token }}
-          OWNER: 'adasq'
-          REPO: 'sourcejs-muslim'
+      - name: 'checkout'
+      # if: github.event.action == 'html.preview2'
+        uses: actions/checkout@v1
+      - name: 'qqq'
+        uses: adasq/dropbox-v2-api-watcher@prepublish
+          with:
+            myInput: ${{ github.event.action }}
+          env:
+            TOKEN: ${{ secrets.token }}
+            OWNER: 'adasq'
+            REPO: 'sourcejs-muslim'
   publish-npm:
     needs: version
     runs-on: ubuntu-latest
